@@ -1,0 +1,4 @@
+[dependency "org/puremvc/as3"]
+  commit = 2.0.4
+  path = org/puremvc/as3
+  url = git@github.com:collectivecolors/as3-org.puremvc.as3.git
