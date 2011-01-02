@@ -1,6 +1,6 @@
 /*
 	PureMVC Utility - Loadup
-	Copyright (c) 2008 Philip Sexton <philip.sexton@puremvc.org>
+	Copyright (c) 2008-10 Philip Sexton <philip.sexton@puremvc.org>
 	Your reuse is governed by the Creative Commons Attribution 3.0 License
 */
 package org.puremvc.as3.utilities.loadup.assetloader.model.assets
@@ -8,20 +8,18 @@ package org.puremvc.as3.utilities.loadup.assetloader.model.assets
 	import mx.core.UIComponent;
 	import mx.controls.TextArea;
 
-    import org.puremvc.as3.utilities.loadup.Loadup;
     import org.puremvc.as3.utilities.loadup.assetloader.interfaces.IAssetForFlex;
-    import org.puremvc.as3.utilities.loadup.assetloader.model.AssetGroupProxy;
 
-	public class AssetOfTypeText extends AssetBase implements IAssetForFlex
+	public class FlexAssetOfTypeText extends FlashAssetOfTypeText implements IAssetForFlex
 	{
         private var _uiComponent :UIComponent;
 
-		public function AssetOfTypeText( url :String ) {
+		public function FlexAssetOfTypeText( url :String ) {
 		    super( url );
 		}
-		public function get type() :String {
-		    return Loadup.TEXT_ASSET_TYPE;
-		}
+		/**
+		 *    A TextArea component containing this asset's text.
+		 */
 		public function get uiComponent() :UIComponent {
 		    if ( ! data )
 		        return null;
